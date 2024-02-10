@@ -13,8 +13,8 @@ CC      = g++
 OPT     = -Wall -Wno-unknown-pragmas -O3 -g -mtune=native
 CFLAGS  =  
 LFLAGS  = -lgsl -lgslcblas 
-CPATHS  = -I./src -I$(HOME)/local/include -I/opt/local/include -I/usr/local/include
-LPATHS  = -L$(HOME)/local/lib -L/opt/local/lib -L/usr/local/lib
+CPATHS  = -I./src -I$(HOME)/local/include -I/opt/local/include -I/usr/local/include -I/usr/include/hdf5/serial/ -DH5_USE_16_API
+LPATHS  = -L$(HOME)/local/lib -L/opt/local/lib -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu/hdf5/serial/ -lhdf5 -lz
 
 ##############################################################################
 # if you have FFTW 2.1.5 or 3.x with multi-thread support, you can enable the 
